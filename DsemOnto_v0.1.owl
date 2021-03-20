@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto">
+    <Prefix name="" IRI="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#schema:PropertyValue"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/Deployment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Precision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Sensitivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#numericValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedOnBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isObservedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasDeployment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/inDeployment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemCapability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/maxValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/minValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://schema.org/value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Category"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Humanity_min"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ItemID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Volt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ppm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#second"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Arduino_01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BlueTooth_HC-06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CO2_Sensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DHT11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DSEM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dust_Sensor_GP2Y10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Humidity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumiditySensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumiditySensorAccuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumiditySensorOperatingRange"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LabSample1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LabSample2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LabSample3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Light"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Raspberry-Pi_01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorOperatingRange"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorSensitivity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fine_dust"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unit_DegreeCelsius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unit_percent"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#schema:PropertyValue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+            <Class abbreviatedIRI="rdfs:Literal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#schema:PropertyValue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+            <Class abbreviatedIRI="rdfs:Literal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Accuracy"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Precision"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Sensitivity"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#Arduino_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#CO2_Sensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#DHT11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#DHT11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <NamedIndividual IRI="#DSEM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/Deployment"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#HumiditySensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#HumiditySensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <NamedIndividual IRI="#HumiditySensorOperatingRange"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <NamedIndividual IRI="#LabSample1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#LabSample1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+        <NamedIndividual IRI="#LabSample1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <NamedIndividual IRI="#LabSample2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#LabSample2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+        <NamedIndividual IRI="#LabSample2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <NamedIndividual IRI="#LabSample3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+        <NamedIndividual IRI="#LabSample3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+        <NamedIndividual IRI="#LabSample3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#schema:PropertyValue"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#schema:PropertyValue"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#Raspberry-Pi_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+        <NamedIndividual IRI="#TemperatureSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+        <NamedIndividual IRI="#TemperatureSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#schema:PropertyValue"/>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Accuracy"/>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <NamedIndividual IRI="#TemperatureSensorOperatingRange"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#schema:PropertyValue"/>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Precision"/>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#schema:PropertyValue"/>
+        <NamedIndividual IRI="#TemperatureSensorSensitivity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/Sensitivity"/>
+        <NamedIndividual IRI="#TemperatureSensorSensitivity"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#Arduino_01"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#Arduino_01"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#Arduino_01"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#BlueTooth_HC-06"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#BlueTooth_HC-06"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#BlueTooth_HC-06"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#CO2_Sensor"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#DHT11"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#DHT11"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <NamedIndividual IRI="#DHT11"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+        <NamedIndividual IRI="#DHT11"/>
+        <NamedIndividual IRI="#HumiditySensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+        <NamedIndividual IRI="#DHT11"/>
+        <NamedIndividual IRI="#TemperatureSensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+        <NamedIndividual IRI="#DSEM"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+        <NamedIndividual IRI="#DSEM"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+        <NamedIndividual IRI="#DSEM"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#LabSample1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#LabSample2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#LabSample3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#Humidity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#Light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#Temperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/forProperty"/>
+        <NamedIndividual IRI="#DSEMDeployment"/>
+        <NamedIndividual IRI="#fine_dust"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+        <NamedIndividual IRI="#DHT11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+        <NamedIndividual IRI="#DHT11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#DSEMEnvCollector02"/>
+        <NamedIndividual IRI="#Dust_Sensor_GP2Y10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+        <NamedIndividual IRI="#CDS_Sensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <NamedIndividual IRI="#DSEMEnvCollector03"/>
+        <NamedIndividual IRI="#DHT11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isObservedBy"/>
+        <NamedIndividual IRI="#Humidity"/>
+        <NamedIndividual IRI="#HumiditySensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingRange"/>
+        <NamedIndividual IRI="#HumiditySensor"/>
+        <NamedIndividual IRI="#HumiditySensorOperatingRange"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+        <NamedIndividual IRI="#HumiditySensorOperatingRange"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+        <NamedIndividual IRI="#HumiditySensorOperatingRange"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingRange"/>
+        <NamedIndividual IRI="#TemperatureSensor"/>
+        <NamedIndividual IRI="#TemperatureSensorOperatingRange"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemCapability"/>
+        <NamedIndividual IRI="#TemperatureSensor"/>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemProperty"/>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+        <NamedIndividual IRI="#TemperatureSensorCapability"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+        <NamedIndividual IRI="#TemperatureSensorOperatingRange"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/inCondition"/>
+        <NamedIndividual IRI="#TemperatureSensorOperatingRange"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+        <NamedIndividual IRI="#unit_DegreeCelsius"/>
+        <NamedIndividual IRI="#DSEMEnvCollector01"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/minValue"/>
+        <NamedIndividual IRI="#HumiditySensorAccuracy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/minValue"/>
+        <NamedIndividual IRI="#HumiditySensorAccuracy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+        <NamedIndividual IRI="#HumiditySensorAccuracy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">percent</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/maxValue"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">90.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/minValue"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdfs:comment"/>
+        <NamedIndividual IRI="#NormalHumidityCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A humidity range of 20% to 90%.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/maxValue"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">50.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/minValue"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="rdfs:comment"/>
+        <NamedIndividual IRI="#NormalTemperatureCondition"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">A temperature range of 0 to 50 Celsius.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/maxValue"/>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/minValue"/>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+        <NamedIndividual IRI="#TemperatureSensorAccuracy"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/maxValue"/>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/minValue"/>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+        <NamedIndividual IRI="#TemperatureSensorPrecision"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/unitCode"/>
+        <NamedIndividual IRI="#TemperatureSensorSensitivity"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://schema.org/value"/>
+        <NamedIndividual IRI="#TemperatureSensorSensitivity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.1</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingProperty"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingRange"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemCapability"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemProperty"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedOnBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isObservedBy"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/inDeployment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasDeployment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemProperty"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+        <Class IRI="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedOnBy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isObservedBy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isObservedBy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Deployment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasDeployment"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/inDeployment"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Deployment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingRange"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemCapability"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/actsOnProperty"/>
+        <Class IRI="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hasSample"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sample"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/hosts"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isActedOnBy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/isObservedBy"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeActuation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeByActuator"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Actuator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/sosa/madeObservation"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Deployment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <Class IRI="http://www.w3.org/ns/ssn/System"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasDeployment"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Deployment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/hasSubSystem"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/inDeployment"/>
+        <Class IRI="http://www.w3.org/ns/sosa/Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingProperty"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasOperatingRange"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/ns/ssn/systems/hasSystemCapability"/>
+        <Class IRI="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Category"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ItemID"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

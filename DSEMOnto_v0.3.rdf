@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto"
+     xml:base="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:qudt="http://qudt.org/1.1/schema/qudt#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:schema="http://schema.org/"
+     xmlns:systems="http://www.w3.org/ns/ssn/systems/"
+     xmlns:DsemOnto="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/1.1/schema/qudt#numericValue -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/1.1/schema/qudt#numericValue"/>
+    
+
+
+    <!-- http://qudt.org/1.1/schema/qudt#unit -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/1.1/schema/qudt#unit"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/actsOnProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isActedOnBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSample -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSample">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hosts -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hosts">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isActedOnBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isActedOnBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isFeatureOfInterestOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isHostedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isObservedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isObservedBy">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isResultOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeActuation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeActuation">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeByActuator -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeObservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/deployedOnPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedOnPlatform">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/inDeployment"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/deployedSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedSystem">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/forProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasDeployment -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasDeployment">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/inDeployment -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/inDeployment">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/SystemProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/SystemProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/systems/hasSystemProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasOperatingProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasOperatingProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasOperatingRange -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasOperatingRange">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasSystemCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasSystemCapability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/hasSystemProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/hasSystemProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/inCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/systems/inCondition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/maxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/maxValue"/>
+    
+
+
+    <!-- http://schema.org/minValue -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/minValue"/>
+    
+
+
+    <!-- http://schema.org/unitCode -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/unitCode"/>
+    
+
+
+    <!-- http://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/value"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Category -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Humanity_min -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Humanity_min"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#RegistryTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#RegistryTime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Status"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Volt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Volt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#ppm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#ppm"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#second -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#second"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#qudt-1-1:numericValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#qudt-1-1:numericValue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#qudt-1-1:unit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#qudt-1-1:unit"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/resultTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/resultTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceItem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#schema:PropertyValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#schema:PropertyValue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Literal -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ActuatableProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuatableProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuator -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Platform -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sample -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sample">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Deployment -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/Property -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/Accuracy -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/Accuracy">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/Condition -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/Condition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/OperatingProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/OperatingProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/OperatingRange -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/OperatingRange">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/Precision -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/Precision">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/Sensitivity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/Sensitivity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/SystemCapability -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/SystemCapability">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/systems/SystemProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/SystemProperty">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Arduino_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Arduino_01">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Arduino_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Arduino_02">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Arduino_03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Arduino_03">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#BlueTooth_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#BlueTooth_01">
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CDS_Light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CDS_Light">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CO2_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CO2_Sensor">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+        <ssn:hasSubSystem rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Humidity"/>
+        <ssn:hasSubSystem rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Humidity">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:isObservedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Humidity"/>
+        <systems:hasOperatingRange rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#HumiditySensorOperatingRange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Temperature">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:isObservedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMDeployment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMDeployment">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <ssn:deployedOnPlatform rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample1"/>
+        <ssn:deployedOnPlatform rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample2"/>
+        <ssn:deployedOnPlatform rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample3"/>
+        <ssn:deployedSystem rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+        <ssn:deployedSystem rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+        <ssn:deployedSystem rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceItem"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CDS_Light"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11"/>
+        <DsemOnto:Category rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Self-Construct</DsemOnto:Category>
+        <DsemOnto:DeviceType rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">SensorNode</DsemOnto:DeviceType>
+        <DsemOnto:Manufacturer rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DSEMLab</DsemOnto:Manufacturer>
+        <DsemOnto:RegistryTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></DsemOnto:RegistryTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceItem"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Dust_Sensor"/>
+        <DsemOnto:Category rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Self-Construct</DsemOnto:Category>
+        <DsemOnto:DeviceType rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">SensorNode</DsemOnto:DeviceType>
+        <DsemOnto:Manufacturer rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DSEMLab</DsemOnto:Manufacturer>
+        <DsemOnto:RegistryTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></DsemOnto:RegistryTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DeviceItem"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CDS_Light"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CO2_Sensor"/>
+        <sosa:hosts rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11"/>
+        <DsemOnto:Category rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Self-Construct</DsemOnto:Category>
+        <DsemOnto:DeviceType rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">SensorNode</DsemOnto:DeviceType>
+        <DsemOnto:Manufacturer rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DSEMLab</DsemOnto:Manufacturer>
+        <DsemOnto:RegistryTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></DsemOnto:RegistryTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Dust_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Dust_Sensor">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#HumiditySensorAccuracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#HumiditySensorAccuracy">
+        <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-1.0</schema:minValue>
+        <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</schema:minValue>
+        <schema:unitCode rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">percent</schema:unitCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#HumiditySensorOperatingRange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#HumiditySensorOperatingRange">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
+        <systems:inCondition rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#NormalHumidityCondition"/>
+        <systems:inCondition rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#NormalTemperatureCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#IndoorEnvironment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#IndoorEnvironment">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <sosa:hasSample rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+        <sosa:hasSample rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+        <sosa:hasSample rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#IndoorEnvironmentMonitoringSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#IndoorEnvironmentMonitoringSystem">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#LabSample3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#NormalHumidityCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#NormalHumidityCondition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#schema:PropertyValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <schema:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90.0</schema:maxValue>
+        <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</schema:minValue>
+        <schema:unitCode rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</schema:unitCode>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A humidity range of 20% to 90%.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#NormalTemperatureCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#NormalTemperatureCondition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#schema:PropertyValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
+        <schema:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</schema:maxValue>
+        <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</schema:minValue>
+        <schema:unitCode rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeCelsius</schema:unitCode>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A temperature range of 0 to 50 Celsius.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Dust -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Dust">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:isResultOf rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Dust_Sensor"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></sosa:resultTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Humidity">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <qudt:unit rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#unit_percent"/>
+        <sosa:isResultOf rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Light">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:isResultOf rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#CDS_Light"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></sosa:resultTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Observation_Temperature">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <qudt:unit rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#unit_DegreeCelsius"/>
+        <sosa:isResultOf rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DHT11_Temperature"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></sosa:resultTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Raspberry-Pi_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#Raspberry-Pi_01">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector01"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector02"/>
+        <sosa:isHostedBy rdf:resource="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#DSEMEnvCollector03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#unit_DegreeCelsius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#unit_DegreeCelsius"/>
+    
+
+
+    <!-- http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#unit_percent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/t1/ontologies/2020/11/DsemOnto#unit_percent"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
